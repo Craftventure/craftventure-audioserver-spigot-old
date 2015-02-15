@@ -1,0 +1,10 @@
+name: AudioServer
+main: net.craftventure.audioserver.AudioServer
+version: 3.0-ALPHA_B28
+softdepend: [WorldEdit, PermissionsEx]
+description: The Craftventure Custom Audio/Music plugin
+commands:
+  setaudio:
+    description: Geeft alle plugin commando's
+  audio:
+    description: Geeft alle plugin commando's
