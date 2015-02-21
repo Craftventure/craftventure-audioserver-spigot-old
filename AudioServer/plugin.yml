@@ -1,6 +1,6 @@
 name: AudioServer
 main: net.craftventure.audioserver.AudioServer
-version: 3.0-ALPHA_B28
+version: 3.0-ALPHA_B31
 softdepend: [WorldEdit, PermissionsEx]
 description: The Craftventure Custom Audio/Music plugin
 commands:

@@ -4,9 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.player.*;
 
 public class GeneralListener implements Listener {
     AudioServer plugin;
@@ -14,6 +12,21 @@ public class GeneralListener implements Listener {
     public GeneralListener(AudioServer r_plugin) {
         plugin = r_plugin;
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+
+    public void cleanPlayer(Player player) {
+        for(AudioArea area : AudioServer.get().getAudioAreas())
+            area.removePlayer(player);
+    }
+
+    @EventHandler
+    public void onPlayerKick(PlayerKickEvent event) {
+        cleanPlayer(event.getPlayer());
+    }
+
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent event) {
+        cleanPlayer(event.getPlayer());
     }
 
     @EventHandler
