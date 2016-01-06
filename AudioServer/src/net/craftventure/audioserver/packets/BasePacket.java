@@ -2,7 +2,7 @@ package net.craftventure.audioserver.packets;
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonObject;
+import com.google.gson.JsonObject;
 
 public class BasePacket {
 	protected int id = 0;

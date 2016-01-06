@@ -1,6 +1,6 @@
 package net.craftventure.audioserver.packets;
 
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonObject;
+import com.google.gson.JsonObject;
 
 public class PacketWarp extends BasePacket {
 	private String warp = "";
